@@ -19,6 +19,7 @@ WHERE
 ORDER BY price_per_gram;
 
 Q) group the products into category like low, medium, bulk
+
 SELECT 
     CASE
         WHEN weightingrams < 300 THEN 'low'
@@ -30,7 +31,8 @@ FROM
     zepto
 GROUP By weight_category;
 
-Q) what is the total inventory weight per category 
+Q) what is the total inventory weight per category
+
 SELECT 
     category,
     SUM(weightingrams * availablequantity) AS total_weight
@@ -40,6 +42,7 @@ GROUP BY category
 ORDER BY total_weight;
 
 Q) what is the potential revenue loss due to out of stock products
+
 SELECT 
     name,
     SUM(disscountedsellingprice * quantity) AS revenue_loss
@@ -50,6 +53,7 @@ WHERE
 GROUP BY name;
  
 Q) which products are heavily discounted 
+
 SELECT 
     name,
     mrp,
