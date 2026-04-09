@@ -1,8 +1,12 @@
 # SQL-Project
 This project focuses on analyzing a zepto inventory dataset, involving data cleaning, preprocessing, and solving bussiness-driven questions. The analysis aims to uncover insights related to product availability, pricing, and inventory trends to support better business decision-making.
 
+
 Here is some highlighted business queries of my project:
+
+
 Q) find the price per gram for product above 100g and sort by best value
+
 SELECT DISTINCT
     name,
     disscountedsellingprice,
